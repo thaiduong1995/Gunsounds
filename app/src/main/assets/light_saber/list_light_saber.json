@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Saber 5",
+    "folderName": "Saber 5",
+    "location": "light_saber/Saber 5/saber 5.png",
+    "soundStart": "light_saber_start.mp3",
+    "sound": "light saber.mp3",
+    "soundEnd": "light_saber_end.mp3",
+    "listEffect": ["light saber.json", "Kylo Ren light saber.json", "light saber effect.json"]
+  },
+  {
+    "name": "Saber 2",
+    "folderName": "Saber 2",
+    "location": "light_saber/Saber 2/saber 2.png",
+    "soundStart": "light_saber_start.mp3",
+    "sound": "light saber.mp3",
+    "soundEnd": "light_saber_end.mp3",
+    "listEffect": ["light saber.json", "Kylo Ren light saber.json", "light saber effect.json"]
+  },
+  {
+    "name": "Saber 6",
+    "folderName": "Saber 6",
+    "location": "light_saber/Saber 6/saber 6.png",
+    "soundStart": "light_saber_start.mp3",
+    "sound": "light saber.mp3",
+    "soundEnd": "light_saber_end.mp3",
+    "listEffect": ["light saber.json", "Kylo Ren light saber.json", "light saber effect.json"]
+  },
+  {
+    "name": "Saber 3",
+    "folderName": "Saber 3",
+    "location": "light_saber/Saber 3/saber 3.png",
+    "soundStart": "light_saber_start.mp3",
+    "sound": "light saber.mp3",
+    "soundEnd": "light_saber_end.mp3",
+    "listEffect": ["light saber.json", "Kylo Ren light saber.json", "light saber effect.json"]
+  },
+  {
+    "name": "Saber 1",
+    "folderName": "Saber 1",
+    "location": "light_saber/Saber 1/saber 1.png",
+    "soundStart": "light_saber_start.mp3",
+    "sound": "light saber.mp3",
+    "soundEnd": "light_saber_end.mp3",
+    "listEffect": ["light saber.json", "Kylo Ren light saber.json", "light saber effect.json"]
+  },
+  {
+    "name": "Saber 4",
+    "folderName": "Saber 4",
+    "location": "light_saber/Saber 4/saber 4.png",
+    "soundStart": "light_saber_start.mp3",
+    "sound": "light saber.mp3",
+    "soundEnd": "light_saber_end.mp3",
+    "listEffect": ["light saber.json", "Kylo Ren light saber.json", "light saber effect.json"]
+  }
+]

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/pad_hor_common_small"
+    android:paddingVertical="@dimen/pad_ver_common"
+    android:orientation="vertical"
+    android:background="@drawable/bg_popup_setting_detail"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/vibrateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchVibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/switch_height_button"
+            android:layout_gravity="center_vertical"
+            android:thumb="@drawable/switch_thumb_custom"
+            app:trackTint="@drawable/switch_track_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/vibrate"
+            android:textColor="@color/text_secondary_color"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_vibrate_mode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flashLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/switch_height_button"
+            android:thumb="@drawable/switch_thumb_custom"
+            tools:checked="true"
+            app:trackTint="@drawable/switch_track_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:text="@string/flash"
+            android:textColor="@color/text_secondary_color"
+            app:drawableStartCompat="@drawable/ic_flash_mode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/soundLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchSound"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:thumb="@drawable/switch_thumb_custom"
+            app:trackTint="@drawable/switch_track_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:text="@string/sound"
+            android:textColor="@color/text_secondary_color"
+            app:drawableStartCompat="@drawable/ic_sound_mode" />
+    </LinearLayout>
+
+
+</LinearLayout>

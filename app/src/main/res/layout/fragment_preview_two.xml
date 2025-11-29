@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_preview_two">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/divide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.68" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTitle"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_8"
+        app:layout_constraintWidth_percent="0.89"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvContent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitleOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/edgeracerlaserital2"
+            android:gravity="center"
+            android:text="@string/shock_taser_light_saber"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContent"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.852"
+        android:layout_marginTop="@dimen/size_8"
+        android:fontFamily="@font/utm_banque"
+        android:gravity="center"
+        android:text="@string/txt_content_preview_2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        android:layout_marginBottom="@dimen/size_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ic_step" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_preview_step_1"
+        android:rotation="180"
+        android:layout_marginStart="@dimen/size_16"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/size_26"
+        app:layout_constraintBottom_toTopOf="@id/nativeView"/>
+
+    <com.cem.admodule.manager.CustomNativeView
+        android:id="@+id/nativeView"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="@dimen/size_8"
+        app:ad_view_layout="@layout/admob_native_ad_view_preview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnContinue"
+        app:layout_constraintVertical_bias="1"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnContinue"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_50"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="@dimen/size_21"
+        android:background="@drawable/bg_button_preview"
+        android:layout_marginBottom="@dimen/size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

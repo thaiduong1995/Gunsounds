@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "587197035360",
+    "project_id": "gun-sounds-ed677",
+    "storage_bucket": "gun-sounds-ed677.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587197035360:android:67f2a2442bba00a6c2e405",
+        "android_client_info": {
+          "package_name": "com.gunsound.short.simulator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyTkU8q-56VmFnd4ai9U1M7bUdkj96fWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

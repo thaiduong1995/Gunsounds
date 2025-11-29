@@ -1,0 +1,265 @@
+{
+  "configs": {
+    "enable": true,
+    "isEnableGPDR": true,
+    "interval": 30,
+    "open_interval": 10,
+    "banner_interval": 10,
+    "app_name": "Test Ads",
+    "app_id": "ca-app-pub-3940256099942544~3347511713"
+  },
+  "units": {
+    "open_ads": [
+      {
+        "network": "admob",
+        "show_direct": false,
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/9257395921"
+      },
+      {
+        "network": "admob",
+        "show_direct": false,
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/9257395921"
+      },
+      {
+        "network": "admob",
+        "show_direct": false,
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/9257395921"
+      }
+    ],
+    "inter_splash": [
+      {
+        "network": "admob",
+        "show_direct": true,
+        "enable": false,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "admob",
+        "enable": false,
+        "show_direct": true,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "show_direct": true,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "mintegral",
+        "enable": true,
+        "show_direct": true,
+        "unit_id": "2926816",
+        "placement_id": "1200844"
+      }
+    ],
+    "inter_back": [
+      {
+        "network": "admob",
+        "enable": true,
+        "show_direct": false,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "show_direct": false,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "show_direct": false,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "mintegral",
+        "enable": true,
+        "unit_id": "2926818",
+        "placement_id": "1200846"
+      }
+    ],
+    "inter_preview": [
+      {
+        "show_direct": true,
+        "enable": false,
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/1033173712h"
+      },
+      {
+        "network": "admob",
+        "show_direct": true,
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712h"
+      },
+      {
+        "network": "admob",
+        "show_direct": true,
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "mintegral",
+        "enable": true,
+        "unit_id": "2926822",
+        "placement_id": "1200849"
+      }
+    ],
+    "inter_detail": [
+      {
+        "network": "admob",
+        "enable": false,
+        "show_direct": false,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "show_direct": false,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "show_direct": false,
+        "unit_id": "ca-app-pub-3940256099942544/1033173712"
+      },
+      {
+        "network": "mintegral",
+        "enable": true,
+        "unit_id": "2926824",
+        "placement_id": "1200851"
+      }
+    ],
+    "banner_home": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "position": "bottom",
+        "enable": false,
+        "collapsible": true
+      },
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617a",
+        "position": "bottom",
+        "enable": true,
+        "collapsible": true
+      },
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "position": "bottom",
+        "enable": true,
+        "collapsible": true
+      },
+      {
+        "network": "mintegral",
+        "unit_id": "2926847",
+        "placement_id": "1200871",
+        "position": "bottom",
+        "enable": true,
+        "collapsible": false
+      }
+    ],
+    "banner_preview": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "enable": true,
+        "position": "bottom",
+        "collapsible": true
+      },
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "enable": true,
+        "position": "bottom",
+        "collapsible": true
+      },
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "enable": true,
+        "position": "bottom",
+        "collapsible": true
+      },
+      {
+        "network": "mintegral",
+        "unit_id": "2926853",
+        "placement_id": "1200876",
+        "position": "bottom",
+        "enable": true,
+        "collapsible": false
+      }
+    ],
+    "banner_detail": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "enable": true,
+        "position": "bottom",
+        "collapsible": true
+      },
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "enable": true,
+        "position": "bottom",
+        "collapsible": true
+      },
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "enable": true,
+        "position": "bottom",
+        "collapsible": true
+      },
+      {
+        "network": "mintegral",
+        "unit_id": "2926855",
+        "placement_id": "1200878",
+        "position": "bottom",
+        "enable": true,
+        "collapsible": false
+      }
+    ],
+    "reward_ads": [
+      {
+        "network": "admob",
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/5224354917"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/5224354917"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/5224354917"
+      }
+    ],
+    "native_ads": [
+      {
+        "network": "admob",
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/2247696110"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/2247696110"
+      },
+      {
+        "network": "admob",
+        "enable": true,
+        "unit_id": "ca-app-pub-3940256099942544/2247696110"
+      }
+    ]
+  }
+}

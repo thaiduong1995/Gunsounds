@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="FullScreenDialog" parent="Theme.GunSimulator">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar" >true</item>
+    </style>
+
+    <style name="FullScreenDialog.Transparent" parent="FullScreenDialog">
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+        <item name="android:statusBarColor">@color/popup_bg_outside_color</item>
+        <item name="android:navigationBarColor">@color/popup_bg_outside_color</item>
+        <item name="android:windowBackground">@color/popup_bg_outside_color</item>
+    </style>
+
+    <style name="ImageButton.Style" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="ImageButtonDetailScreen.Style" parent="ImageButton.Style">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:padding">6dp</item>
+    </style>
+
+    <style name="PrimaryButton.Style" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/bg_button_setting</item>
+        <item name="android:fontFamily">@font/montserrat_bold_700</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingStart">@dimen/pad_hor_common</item>
+        <item name="android:paddingEnd">@dimen/pad_hor_common</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="PrimaryButton.StyleAds" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/ic_ads_button</item>
+        <item name="android:fontFamily">@font/montserrat_bold_700</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingStart">@dimen/pad_hor_common</item>
+        <item name="android:paddingEnd">@dimen/pad_hor_common</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="TextView.ScreenTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_primary_color</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/montserrat_bold_700</item>
+    </style>
+
+    <style name="MyRadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawableStart">@drawable/checkbox_selector</item>
+        <item name="android:textColor">@color/text_secondary_color</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:fontFamily">@font/montserrat_semi_600</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/radio_btn_height_gun</item>
+    </style>
+
+    <style name="TextView.GunInfoLabel" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_secondary_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat_semi_600</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/mar_ver_common_small</item>
+    </style>
+
+    <style name="TextView.GunInfoValues" parent="TextView.GunInfoLabel">
+        <item name="android:textColor">#45FD18</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <declare-styleable name="CustomNativeView">
+        <attr name="ad_view_layout" format="reference" />
+    </declare-styleable>
+</resources>

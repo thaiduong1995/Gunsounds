@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popup_bg_outside_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.GunInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imvBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_setting"
+            android:layout_marginStart="@dimen/size_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineCenter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="329dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.085" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold_700"
+            tools:text="@string/setting"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/lineTitle"
+            app:layout_constraintEnd_toEndOf="@id/lineCenter"
+            app:layout_constraintStart_toStartOf="@id/lineCenter"
+            app:layout_constraintTop_toTopOf="@+id/lineTitle" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineTop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.175" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/infoLayout"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_8"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintWidth_percent=".6"
+            app:layout_constraintBottom_toTopOf="@+id/lineBottom"
+            app:layout_constraintEnd_toEndOf="@id/lineCenter"
+            app:layout_constraintStart_toStartOf="@id/lineCenter"
+            app:layout_constraintTop_toBottomOf="@+id/gunView">
+
+            <TextView
+                android:id="@+id/tvOriginLabel"
+                style="@style/TextView.GunInfoLabel"
+                android:text="@string/place_of_origin"
+                android:layout_marginTop="@dimen/mar_ver_common"
+                android:layout_marginStart="@dimen/size_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvOriginValue"
+                style="@style/TextView.GunInfoValues"
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_8"
+                android:marqueeRepeatLimit ="marquee_forever"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvOriginLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvOriginLabel"
+                tools:text="USA" />
+
+            <TextView
+                android:id="@+id/tvServiceLabel"
+                style="@style/TextView.GunInfoLabel"
+                android:layout_width="0dp"
+                android:text="@string/in_service"
+                app:layout_constraintStart_toStartOf="@+id/tvOriginLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvOriginLabel" />
+
+            <TextView
+                android:id="@+id/tvServiceValue"
+                style="@style/TextView.GunInfoValues"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/size_8"
+                app:layout_constraintWidth_percent=".5"
+                app:layout_constraintStart_toEndOf="@+id/tvServiceLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvServiceLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                tools:text="2001-Present" />
+
+            <TextView
+                android:id="@+id/tvDesignedLabel"
+                style="@style/TextView.GunInfoLabel"
+                android:layout_width="0dp"
+                android:text="@string/designed"
+                app:layout_constraintStart_toStartOf="@+id/tvOriginLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvServiceLabel" />
+
+            <TextView
+                android:id="@+id/tvDesignedValue"
+                style="@style/TextView.GunInfoValues"
+                android:layout_width="@dimen/size_0"
+                android:layout_marginHorizontal="@dimen/size_8"
+                app:layout_constraintStart_toEndOf="@+id/tvDesignedLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvDesignedLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                tools:text="USA, Philippines" />
+
+            <TextView
+                android:id="@+id/tvLengthLabel"
+                style="@style/TextView.GunInfoLabel"
+                android:layout_width="0dp"
+                android:text="@string/length"
+                app:layout_constraintStart_toStartOf="@+id/tvOriginLabel"
+                app:layout_constraintTop_toBottomOf="@+id/tvDesignedLabel" />
+
+            <TextView
+                android:id="@+id/tvLengthValue"
+                style="@style/TextView.GunInfoValues"
+                android:layout_width="@dimen/size_0"
+                android:layout_marginHorizontal="@dimen/size_8"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/tvLengthLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvLengthLabel"
+                tools:text="660mm - 740mm" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineBottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.91" />
+
+        <ImageView
+            android:id="@+id/btnClose"
+            style="@style/ImageButton.Style"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="0dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toTopOf="@+id/lineTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lineRight"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/gunView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintWidth_percent=".5"
+            app:layout_constraintEnd_toEndOf="@id/lineCenter"
+            app:layout_constraintStart_toStartOf="@id/lineCenter"
+            app:layout_constraintTop_toTopOf="@+id/lineTop"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="gun/AWM/AWM.json"
+            app:lottie_loop="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

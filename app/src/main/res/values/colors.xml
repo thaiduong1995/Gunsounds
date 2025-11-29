@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="black80">#CC000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_color">#660491</color>
+    <color name="window_color_1">#71059B</color>
+    <color name="window_color_2">#3F006A</color>
+    <color name="secondary_color">#FCEE21</color>
+    <color name="window_bg_color">@color/white</color>
+    <color name="status_bar_color">@color/transparent</color>
+    <color name="text_primary_color">#FCEE21</color>
+    <color name="text_secondary_color">@color/white</color>
+    <color name="text_tertiary_color">@color/black</color>
+    <color name="text_hint_color">#969696</color>
+    <color name="transparent">#00000000</color>
+    <color name="popup_bg_outside_color">#B2000000</color>
+    <color name="yellowFCEE21">#FCEE21</color>
+    <color name="yellowFBB03B">#FBB03B</color>
+    <color name="cyclone00FFFC">#00FFFC</color>
+    <color name="redFF0036">#FF0036</color>
+    <color name="redE90D00">#E90D00</color>
+    <color name="green18FF00">#18FF00</color>
+    <color name="green41FB33">#41FB33</color>
+    <color name="purple8916FE">#8916FE</color>
+    <color name="purpleBD00FF">#BD00FF</color>
+    <color name="blue251DFF">#251DFF</color>
+    <color name="yellowFFD800">#FFD800</color>
+    <color name="orangeFF5A00">#FF5A00</color>
+    <color name="orangeFD6A00">#FD6A00</color>
+    <color name="orange1AFF5A00">#1AFF5A00</color>
+    <color name="orange80FF5A00">#80FF5A00</color>
+    <color name="yellowFCCB21">#FCCB21</color>
+    <color name="yellowFCF600">#FCF600</color>
+    <color name="black1D1B08">#1D1B08</color>
+    <color name="grey6A7281">#6A7281</color>
+
+    <color name="neon_body">#CAC44D</color>
+    <color name="neon_glow_50">#E6CAC44D</color>
+    <color name="neon_glow_20">#33CAC44D</color>
+    <color name="neon_glow_15">#26CAC44D</color>
+    <color name="neon_glow_10">#1ACAC44D</color>
+    <color name="neon_glow_5">#0DCAC44D</color>
+    <color name="gnt_black">#000000</color>
+</resources>

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Shock 5",
+    "folderName": "Shock 5",
+    "location": "shock_taser/Shock 5/shock 5.png",
+    "sound": "Electric sound.mp3",
+    "effect": "Electric effect.json"
+  },
+  {
+    "name": "Shock 3",
+    "folderName": "Shock 3",
+    "location": "shock_taser/Shock 3/shock 3.png",
+    "sound": "Electric sound.mp3",
+    "effect": "Electric effect.json"
+  },
+  {
+    "name": "Shock 2",
+    "folderName": "Shock 2",
+    "location": "shock_taser/Shock 2/shock 2.png",
+    "sound": "Electric sound.mp3",
+    "effect": "Electric effect.json"
+  },
+  {
+    "name": "Shock 1",
+    "folderName": "Shock 1",
+    "location": "shock_taser/Shock 1/shock 1.png",
+    "sound": "Electric sound.mp3",
+    "effect": "Electric effect.json"
+  },
+  {
+    "name": "Shock 4",
+    "folderName": "Shock 4",
+    "location": "shock_taser/Shock 4/shock 4.png",
+    "sound": "Electric sound.mp3",
+    "effect": "Electric effect.json"
+  },
+  {
+    "name": "Shock 6",
+    "folderName": "Shock 6",
+    "location": "shock_taser/Shock 6/shock 6.png",
+    "sound": "Electric sound.mp3",
+    "effect": "Electric effect.json"
+  }
+]

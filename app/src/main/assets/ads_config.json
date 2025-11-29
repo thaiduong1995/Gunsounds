@@ -1,0 +1,131 @@
+{
+  "configs": {
+    "enable": true,
+    "interval": 30,
+    "open_interval": 3,
+    "banner_interval": 3,
+    "native_interval": 3,
+    "load_interval": 30,
+    "app_name": "Gun Simulator",
+    "app_id": "ca-app-pub-5179928085266214~7926615538"
+  },
+  "units": {
+    "inter_ads": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-5179928085266214/1722114894",
+        "ads_type": "inter",
+        "allowPreLoad": false,
+        "enable": true
+      }
+    ],
+    "open_ads": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-5179928085266214/5436577746",
+        "ads_type": "open",
+        "allowPreLoad": true,
+        "enable": true
+      }
+    ],
+    "native_intro": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-5179928085266214/5712749576",
+        "ads_type": "native",
+        "allowPreLoad": true,
+        "enable": true
+      }
+    ],
+    "native_media": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-5179928085266214/3277872512",
+        "ads_type": "native",
+        "allowPreLoad": true,
+        "enable": true
+      }
+    ],
+    "banner_collap": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-5179928085266214/5288746158",
+        "ads_type": "banner",
+        "allowPreLoad": false,
+        "enable": true
+      }
+    ],
+    "reward_ads": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-5179928085266214/8042956567",
+        "ads_type": "banner",
+        "allowPreLoad": false,
+        "enable": true
+      }
+    ]
+  },
+  "placement": {
+    "inter_splash": {
+      "ads_unit": "inter_ads",
+      "enable": true,
+      "show_direct": true
+    },
+    "inter_back": {
+      "ads_unit": "inter_ads",
+      "enable": true,
+      "show_direct": true
+    },
+    "inter_preview": {
+      "ads_unit": "inter_ads",
+      "enable": true,
+      "show_direct": false
+    },
+    "inter_detail": {
+      "ads_unit": "inter_ads",
+      "enable": true,
+      "show_direct": false
+    },
+    "open_ads": {
+      "ads_unit": "open_ads",
+      "enable": true,
+      "show_direct": false
+    },
+    "native_intro": {
+      "ads_unit": "native_intro",
+      "enable": true
+    },
+    "native_reload": {
+      "ads_unit": "native_media",
+      "enable": true
+    },
+    "banner_home": {
+      "ads_unit": "banner_collap",
+      "enable": true,
+      "position": "bottom",
+      "collapsible": true
+    },
+    "banner_preview": {
+      "ads_unit": "banner_collap",
+      "enable": true,
+      "position": "bottom",
+      "collapsible": true
+    },
+    "banner_detail": {
+      "ads_unit": "banner_collap",
+      "enable": false,
+      "position": "bottom",
+      "collapsible": true
+    },
+    "banner_reload": {
+      "ads_unit": "banner_collap",
+      "enable": false,
+      "position": "bottom",
+      "collapsible": true
+    },
+    "reward_ads": {
+      "ads_unit": "reward_ads",
+      "enable": true
+    }
+  }
+}

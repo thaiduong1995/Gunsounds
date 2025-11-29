@@ -1,0 +1,135 @@
+{
+  "configs": {
+    "enable": true,
+    "isEnableGPDR": true,
+    "interval": 30,
+    "open_interval": 10,
+    "banner_interval": 10,
+    "app_name": "Test Ads",
+    "app_id": "ca-app-pub-3940256099942544~3347511713"
+  },
+  "units": {
+    "splash_ads": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/1033173712",
+        "enable": true,
+        "ads_type": "inter"
+      }
+    ],
+    "inter_ads": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/1033173712",
+        "enable": true,
+        "ads_type": "inter",
+        "allowPreLoad": true
+      }
+    ],
+    "open_ads": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/9257395921",
+        "enable": true,
+        "ads_type": "open",
+        "allowPreLoad": true
+      }
+    ],
+    "native_ads": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2247696110",
+        "enable": true,
+        "ads_type": "native",
+        "allowPreLoad": true
+      }
+    ],
+    "banner_collap": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "enable": true,
+        "ads_type": "banner"
+      }
+    ],
+    "banner_small": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/2014213617",
+        "enable": true,
+        "ads_type": "banner"
+      }
+    ],
+    "reward_ads": [
+      {
+        "network": "admob",
+        "unit_id": "ca-app-pub-3940256099942544/5224354917",
+        "enable": true,
+        "ads_type": "reward"
+      }
+    ]
+  },
+  "placement": {
+    "inter_splash": {
+      "ads_unit": "splash_ads",
+      "enable": true,
+      "show_direct": true
+    },
+    "inter_back": {
+      "ads_unit": "inter_ads",
+      "enable": true,
+      "show_direct": true
+    },
+    "inter_preview": {
+      "ads_unit": "inter_ads",
+      "enable": true,
+      "show_direct": false
+    },
+    "inter_detail": {
+      "ads_unit": "inter_ads",
+      "enable": true,
+      "show_direct": false
+    },
+    "open_ads": {
+      "ads_unit": "open_ads",
+      "enable": true,
+      "show_direct": false
+    },
+    "native_intro": {
+      "ads_unit": "native_ads",
+      "enable": true
+    },
+    "native_reload": {
+      "ads_unit": "native_ads",
+      "enable": true
+    },
+    "banner_home": {
+      "ads_unit": "banner_collap",
+      "enable": true,
+      "position": "bottom",
+      "collapsible": true
+    },
+    "banner_preview": {
+      "ads_unit": "banner_collap",
+      "enable": true,
+      "position": "bottom",
+      "collapsible": true
+    },
+    "banner_detail": {
+      "ads_unit": "banner_collap",
+      "enable": true,
+      "position": "bottom",
+      "collapsible": true
+    },
+    "banner_reload": {
+      "ads_unit": "banner_collap",
+      "enable": true,
+      "position": "bottom",
+      "collapsible": true
+    },
+    "reward_ads": {
+      "ads_unit": "reward_ads",
+      "enable": true
+    }
+  }
+}

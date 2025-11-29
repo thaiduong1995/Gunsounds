@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_setting_main"
+    tools:context=".ui.fragment.SettingFragment">
+
+    <ImageView
+        android:id="@+id/btnClose"
+        style="@style/ImageButton.Style"
+        android:layout_width="@dimen/size_40"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_24"
+        android:layout_marginStart="@dimen/size_24"
+        android:padding="0dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold_700"
+        android:text="@string/setting"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnClose"
+        app:layout_constraintBottom_toBottomOf="@+id/btnClose" />
+
+    <TextView
+        android:id="@+id/btnLanguage"
+        style="@style/PrimaryButton.Style"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_32"
+        android:layout_marginHorizontal="@dimen/size_48"
+        android:text="@string/language"
+        android:textColor="@color/text_tertiary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/btnShare"
+        style="@style/PrimaryButton.Style"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_32"
+        android:layout_marginHorizontal="@dimen/size_48"
+        android:text="@string/share"
+        android:textColor="@color/text_tertiary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLanguage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/btnRate"
+        style="@style/PrimaryButton.Style"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_24"
+        android:text="@string/rate"
+        android:textColor="@color/text_tertiary_color"
+        app:layout_constraintEnd_toEndOf="@id/btnShare"
+        app:layout_constraintStart_toStartOf="@id/btnShare"
+        app:layout_constraintTop_toBottomOf="@+id/btnShare"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+    <TextView
+        android:id="@+id/btnPrivacyPolicy"
+        style="@style/PrimaryButton.Style"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_24"
+        android:text="@string/policy_private"
+        android:textColor="@color/text_tertiary_color"
+        app:layout_constraintEnd_toEndOf="@id/btnShare"
+        app:layout_constraintStart_toStartOf="@id/btnShare"
+        app:layout_constraintTop_toBottomOf="@+id/btnRate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <com.cem.admodule.manager.CustomNativeView
+        android:id="@+id/nativeView"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:ad_view_layout="@layout/admob_native_ad_view_setting"
+        android:layout_marginTop="@dimen/size_24"
+        android:layout_marginHorizontal="@dimen/size_24"
+        app:layout_constraintTop_toBottomOf="@id/btnPrivacyPolicy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <TextView
+        android:id="@+id/btnFeedback"
+        style="@style/PrimaryButton.Style"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_24"
+        android:text="@string/feedback"
+        android:textColor="@color/text_tertiary_color"
+        app:layout_constraintEnd_toEndOf="@id/btnShare"
+        app:layout_constraintStart_toStartOf="@id/btnShare"
+        app:layout_constraintTop_toBottomOf="@+id/nativeView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

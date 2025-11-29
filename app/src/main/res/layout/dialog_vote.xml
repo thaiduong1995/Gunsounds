@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/popup_bg_outside_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imvBg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_network"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold_700"
+            android:text="@string/rating_our_app"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/size_10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.baha.reviewbar.ReviewBar
+            android:id="@+id/ratingView"
+            android:layout_width="260dp"
+            android:layout_height="@dimen/size_60"
+            android:gravity="center_vertical"
+            app:whenDragScoreMin="1.0"
+            app:reviewScore="0"
+            app:halfRangeMax="1"
+            app:halfRangeMin="0.1"
+            app:halfEnable="false"
+            app:isIndicator="true"
+            app:reviewScoreMax="5"
+            app:iconSpace="30"
+            app:halfIcon="@drawable/ic_star"
+            app:emptyIcon="@drawable/ic_star_none"
+            app:fillIcon="@drawable/ic_star"
+            android:layout_marginTop="@dimen/size_32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold_700"
+            android:text="@string/if_you_enjoy_our_app"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/size_16"
+            app:layout_constraintTop_toBottomOf="@id/ratingView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular_400"
+            android:text="@string/would_you_mind_rating_us"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/size_10"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_button_off"
+            android:fontFamily="@font/montserrat_bold_700"
+            android:text="@string/maybe_later"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/size_45"
+            android:layout_marginEnd="@dimen/size_15"
+            app:layout_constraintEnd_toStartOf="@id/btn_vote"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_vote"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_button_on"
+            android:fontFamily="@font/montserrat_bold_700"
+            android:text="@string/rate_now"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/size_45"
+            android:layout_marginStart="@dimen/size_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_cancel"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

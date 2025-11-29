@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_16">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_24"
+                android:layout_marginEnd="@dimen/size_32"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.cemsofwave.gunsimulator.ui.customview.GradientTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_extra_bold_800"
+                android:text="@string/background"
+                android:textColor="@color/black1D1B08"
+                android:textSize="@dimen/text_size_24"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                app:layout_constraintTop_toTopOf="@id/imgClose"
+                app:layout_constraintBottom_toBottomOf="@id/imgClose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.cemsofwave.gunsimulator.ui.customview.MaskableFrameLayout
+                android:id="@+id/imvBackgroundBorder"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="@dimen/size_0"
+                android:visibility="visible"
+                app:porterduffxfermode="DST_IN"
+                app:mask="@drawable/mask_background"
+                android:layout_marginBottom="@dimen/size_20"
+                app:layout_constraintWidth_percent=".8"
+                app:layout_constraintHeight_percent=".15"
+                android:layout_marginTop="@dimen/size_28"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintVertical_bias="0">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imvBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/img_item_bullet"
+                    app:layout_constraintVertical_bias="0"/>
+
+            </com.cemsofwave.gunsimulator.ui.customview.MaskableFrameLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/size_0"
+                android:layout_height="@dimen/size_0"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/mask_background_line"
+                app:layout_constraintBottom_toBottomOf="@id/imvBackgroundBorder"
+                app:layout_constraintEnd_toEndOf="@id/imvBackgroundBorder"
+                app:layout_constraintStart_toStartOf="@id/imvBackgroundBorder"
+                app:layout_constraintTop_toTopOf="@id/imvBackgroundBorder"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvItem"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/imvBackgroundBorder"
+                app:layout_constraintEnd_toEndOf="@id/imvBackgroundBorder"
+                app:layout_constraintTop_toBottomOf="@+id/imvBackgroundBorder"
+                app:spanCount="1"
+                tools:listitem="@layout/item_collection_small"
+                android:layout_marginTop="@dimen/size_16"
+                app:layout_constraintVertical_bias="0"/>
+
+            <com.cem.admodule.manager.CustomNativeView
+                android:id="@+id/nativeView"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:ad_view_layout="@layout/admob_native_ad_view_background"
+                android:layout_marginTop="@dimen/size_24"
+                android:layout_marginHorizontal="@dimen/size_24"
+                app:layout_constraintTop_toBottomOf="@id/rvItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCharge"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_48"
+                android:layout_marginVertical="@dimen/size_20"
+                android:background="@drawable/bg_button_setting"
+                android:fontFamily="@font/montserrat_bold_700"
+                android:text="@string/accept"
+                android:textAllCaps="false"
+                android:textColor="@color/black1D1B08"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nativeView" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size_48"
+                android:visibility="invisible"
+                android:background="@drawable/bg_button_setting"
+                android:fontFamily="@font/montserrat_bold_700"
+                android:text="@string/accept"
+                android:textAllCaps="false"
+                android:textColor="@color/black1D1B08"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnCharge" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>

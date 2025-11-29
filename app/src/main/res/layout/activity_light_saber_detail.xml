@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imvBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_window_secondary" />
+
+    <com.cemsofwave.gunsimulator.ui.customview.ColorPickerView
+        android:id="@+id/colorPickerView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:cpv_progress="@integer/bar_color_picker_progress_def"
+        app:cpv_thumbColor="@color/yellowFBB03B"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/size_60"
+        app:layout_constraintBottom_toTopOf="@+id/bannerBottom"
+        app:layout_constraintEnd_toEndOf="@+id/btnBack"
+        app:layout_constraintHeight_percent="@dimen/colorPickerHeightPercent"
+        app:layout_constraintStart_toStartOf="@+id/btnBack" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgColor"
+        android:layout_width="@dimen/size_40"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginStart="@dimen/size_8"
+        android:layout_marginBottom="@dimen/size_32"
+        android:src="@drawable/ic_color"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="@id/btnBack"
+        app:layout_constraintBottom_toTopOf="@+id/bannerBottom" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnBack"
+        android:layout_width="@dimen/size_32"
+        android:layout_height="@dimen/size_32"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_back"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/btnFullscreen"
+        android:layout_width="@dimen/size_32"
+        android:layout_height="@dimen/size_32"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:button="@drawable/fullscreen_selector"
+        android:buttonTint="@color/transparent"
+        android:buttonTintMode="add"
+        android:checked="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <CheckBox
+        android:id="@+id/btnFav"
+        android:layout_width="@dimen/size_32"
+        android:layout_height="@dimen/size_32"
+        android:button="@drawable/favorite_selector"
+        android:buttonTint="@color/transparent"
+        android:buttonTintMode="add"
+        android:layout_marginStart="@dimen/size_8"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="@+id/btnBack"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_setting"
+        android:layout_marginTop="@dimen/size_8"
+        app:layout_constraintEnd_toEndOf="@+id/btnFullscreen"
+        app:layout_constraintTop_toBottomOf="@+id/btnFullscreen"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_8"
+        android:src="@drawable/ic_background"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintEnd_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutBackground"
+        android:layout_width="@dimen/size_32"
+        android:layout_height="@dimen/size_190"
+        android:visibility="gone"
+        android:background="@drawable/background"
+        app:layout_constraintEnd_toEndOf="@id/imgBackground"
+        app:layout_constraintStart_toStartOf="@id/imgBackground"
+        app:layout_constraintTop_toBottomOf="@id/imgBackground">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvBackground"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_background" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutColor"
+        android:layout_width="@dimen/size_40"
+        android:layout_height="@dimen/size_250"
+        android:visibility="gone"
+        android:background="@drawable/bg_color"
+        app:layout_constraintEnd_toEndOf="@id/imgColor"
+        app:layout_constraintStart_toStartOf="@id/imgColor"
+        app:layout_constraintBottom_toTopOf="@id/imgColor">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvColor"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_color"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/batteryEffect"
+        android:layout_width="@dimen/size_82"
+        android:layout_height="@dimen/size_202"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toTopOf="@+id/bannerBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:lottie_fileName="battery.json" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_flash"
+        app:layout_constraintBottom_toBottomOf="@id/batteryEffect"
+        app:layout_constraintEnd_toEndOf="@id/batteryEffect"
+        app:layout_constraintStart_toStartOf="@id/batteryEffect"
+        app:layout_constraintTop_toTopOf="@id/batteryEffect" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/previewLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/colorPickerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lightSaberView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-65dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toTopOf="@+id/imgHilt"
+            app:layout_constraintEnd_toEndOf="@+id/imgHilt"
+            app:layout_constraintStart_toStartOf="@+id/imgHilt"
+            app:layout_constraintWidth_percent="0.5"
+            tools:lottie_fileName="light_saber/Kylo Ren light saber.json"
+            tools:lottie_progress="1" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lightSaberEffect"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/lightSaberView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_colorFilter="@color/black"
+            tools:lottie_fileName="light_saber/light saber effect.json"
+            tools:lottie_progress="0.5" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgHilt"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.31" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentHost"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="@dimen/size_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/bannerBottom"
+        layout="@layout/admob_banner_standard_view"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

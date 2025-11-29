@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity"
+    android:paddingHorizontal="@dimen/pad_hor_common"
+    android:paddingVertical="@dimen/pad_ver_common"
+    android:background="@drawable/bg_window_primary">
+
+    <View
+        android:id="@+id/viewBgInside"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_window_secondary"
+        app:layout_constraintBottom_toBottomOf="@+id/imvBackground"
+        app:layout_constraintEnd_toEndOf="@+id/imvBackground"
+        app:layout_constraintHeight_percent="0.882"
+        app:layout_constraintStart_toStartOf="@+id/imvBackground"
+        app:layout_constraintTop_toTopOf="@+id/imvBackground"
+        app:layout_constraintWidth_percent="0.927" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpagerPreview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBgInside"
+        app:layout_constraintEnd_toEndOf="@+id/viewBgInside"
+        app:layout_constraintStart_toStartOf="@+id/viewBgInside"
+        app:layout_constraintTop_toTopOf="@+id/viewBgInside" />
+
+    <ImageView
+        android:id="@+id/imvBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_card_home" />
+
+    <TextView
+        android:id="@+id/tvPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/montserrat_bold_700"
+        android:text="@string/play"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBgInside"
+        app:layout_constraintEnd_toEndOf="@+id/viewBgInside"
+        app:layout_constraintStart_toStartOf="@+id/viewBgInside" />
+
+    <ImageView
+        android:id="@+id/btnSetting"
+        style="@style/ImageButton.Style"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="0dp"
+        android:layout_margin="@dimen/mar_hor_common_small"
+        android:src="@drawable/ic_setting"
+        app:layout_constraintEnd_toEndOf="@+id/viewBgInside"
+        app:layout_constraintTop_toTopOf="@+id/viewBgInside" />
+
+    <ImageView
+        android:id="@+id/btnPrev"
+        style="@style/ImageButton.Style"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_arrow_left"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBgInside"
+        app:layout_constraintStart_toStartOf="@+id/viewBgInside"
+        app:layout_constraintTop_toTopOf="@+id/viewBgInside" />
+
+    <ImageView
+        android:id="@+id/btnNext"
+        style="@style/ImageButton.Style"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_arrow_left"
+        android:rotation="180"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewBgInside"
+        app:layout_constraintEnd_toEndOf="@+id/viewBgInside"
+        app:layout_constraintTop_toTopOf="@+id/viewBgInside" />
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mar_ver_common_small"
+        android:fontFamily="@font/montserrat_bold_700"
+        android:text="@string/gun"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewBgInside"
+        app:layout_constraintStart_toStartOf="@+id/viewBgInside"
+        app:layout_constraintTop_toTopOf="@+id/viewBgInside" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

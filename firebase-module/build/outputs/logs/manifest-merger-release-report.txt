@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml:2:13-83
+INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml:2:13-83
+INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml:2:13-83
+	package
+		INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+		ADDED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml:2:13-83
+		INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+	xmlns:android
+		ADDED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml:2:23-81
+uses-sdk
+INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml reason: use-sdk injection requested
+INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+	android:targetSdkVersion
+		INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+		ADDED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+		INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+	android:minSdkVersion
+		INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+		ADDED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml
+		INJECTED from /Users/cem/Documents/CEM_AND/And_GunSounds/firebase-module/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3733453333682554386.xml

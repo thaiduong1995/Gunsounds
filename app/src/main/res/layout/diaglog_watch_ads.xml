@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popup_bg_outside_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.GunInfoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imvBg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_setting"
+            android:layout_marginStart="@dimen/size_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineCenter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="329dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.085" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold_700"
+            tools:text="@string/setting"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/lineTitle"
+            app:layout_constraintEnd_toEndOf="@id/lineCenter"
+            app:layout_constraintStart_toStartOf="@id/lineCenter"
+            app:layout_constraintTop_toTopOf="@+id/lineTitle" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineTop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.175" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/infoLayout"
+        android:layout_width="@dimen/size_0"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/watch_ads"
+        android:textAlignment="center"
+        app:layout_constraintWidth_percent=".6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/lineCenter"
+        app:layout_constraintStart_toStartOf="@id/lineCenter"
+        app:layout_constraintTop_toBottomOf="@+id/gunView"
+        app:layout_constraintVertical_bias="0"/>
+
+        <TextView
+            android:id="@+id/btnWatchAds"
+            style="@style/PrimaryButton.Style"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_40"
+            android:layout_marginTop="@dimen/size_12"
+            android:layout_marginHorizontal="@dimen/size_42"
+            android:textColor="@color/text_tertiary_color"
+            app:layout_constraintEnd_toEndOf="@id/infoLayout"
+            app:layout_constraintStart_toStartOf="@id/infoLayout"
+            app:layout_constraintTop_toBottomOf="@+id/infoLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".2"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_video_ads_black"
+            android:layout_marginEnd="@dimen/size_0"
+            app:layout_constraintEnd_toStartOf="@id/text"
+            app:layout_constraintTop_toTopOf="@id/text"
+            app:layout_constraintBottom_toBottomOf="@id/text"/>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_40"
+            android:text="@string/unlock"
+            android:fontFamily="@font/montserrat_bold_700"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/text_tertiary_color"
+            android:textAlignment="center"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/btnWatchAds"
+            app:layout_constraintStart_toStartOf="@id/btnWatchAds"
+            app:layout_constraintTop_toTopOf="@+id/btnWatchAds"
+            app:layout_constraintBottom_toBottomOf="@id/btnWatchAds"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineBottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.91" />
+
+        <ImageView
+            android:id="@+id/btnClose"
+            style="@style/ImageButton.Style"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="0dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toTopOf="@+id/lineTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lineRight"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/gunView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintWidth_percent=".5"
+            app:layout_constraintEnd_toEndOf="@id/lineCenter"
+            app:layout_constraintStart_toStartOf="@id/lineCenter"
+            app:layout_constraintTop_toTopOf="@+id/lineTop"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="gun/AWM/AWM.json"
+            app:lottie_loop="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

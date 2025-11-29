@@ -1,0 +1,163 @@
+package com.cemsofwave.gunsimulator.viewmodel
+
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
+import android.hardware.camera2.CameraAccessException
+import android.hardware.camera2.CameraCharacteristics
+import android.hardware.camera2.CameraCharacteristics.FLASH_INFO_AVAILABLE
+import android.hardware.camera2.CameraManager
+import android.util.Log
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.toBitmap
+import androidx.lifecycle.viewModelScope
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
+import com.bumptech.glide.request.transition.Transition
+import com.cem.firebase_module.analytics.CemAnalytics
+import com.cemsofwave.gunsimulator.R
+import com.cemsofwave.gunsimulator.data.database.DatabaseHelper
+import com.cemsofwave.gunsimulator.data.model.SimulatorModel
+import com.cemsofwave.gunsimulator.utils.BACKGROUND_NAME
+import com.cemsofwave.gunsimulator.utils.ERROR
+import com.cemsofwave.gunsimulator.utils.GUN_DETAIL
+import com.cemsofwave.gunsimulator.utils.IS_FLASH_DEF
+import com.cemsofwave.gunsimulator.utils.IS_SOUND_DEF
+import com.cemsofwave.gunsimulator.utils.IS_VIBRATE_DEF
+import com.cemsofwave.gunsimulator.utils.SELECT_BACKGROUND
+import com.trinhbx.base.model.MutableStateLiveData
+import com.trinhbx.base.ui.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+/**
+ * @author
+ * Created by Trinh BX.
+ * Mail: trinhbx196@gmail.com.
+ * Phone: +084 988 324 622.
+ * @since 26/10/2023
+ */
+
+@HiltViewModel
+class SimulatorViewModel @Inject constructor(
+    @ApplicationContext private val context: Context,
+    private val databaseHelper: DatabaseHelper
+) :
+    BaseViewModel() {
+    val isVibrate = MutableStateLiveData<Boolean>()
+    val isFlash = MutableStateLiveData<Boolean>()
+    val isSound = MutableStateLiveData<Boolean>()
+    private val _backgroundBitmapFlow: MutableStateFlow<Bitmap?> = MutableStateFlow(null)
+    val backgroundBitmapFlow: StateFlow<Bitmap?> = _backgroundBitmapFlow
+
+    private val _listBgBitmapFlow: MutableStateFlow<List<Bitmap>> = MutableStateFlow(listOf())
+    val listBgBitmapFlow: StateFlow<List<Bitmap>> = _listBgBitmapFlow
+
+    val isSimulatorLiked = MutableStateLiveData<Boolean>()
+
+    var colorProgress = 67
+    var batteryProcess = 0f
+
+    private var listBg = mutableListOf<Int>()
+
+    private var cameraId: String? = null
+    private var cameraManager: CameraManager? = null
+
+    init {
+        (context.getSystemService(Context.CAMERA_SERVICE) as? CameraManager)?.let {
+            cameraManager = it
+            cameraId = getCameraId()
+        }
+    }
+
+    fun postBoolean(mIsVibrate: Boolean, mIsFlash: Boolean, mIsSound: Boolean){
+        viewModelScope.launch(Dispatchers.IO){
+            isVibrate.postSuccess(mIsVibrate)
+            isFlash.postSuccess(mIsFlash)
+            isSound.postSuccess(mIsSound)
+        }
+    }
+
+    private fun getCameraId(): String? {
+        for (id in cameraManager!!.cameraIdList) {
+            val characteristics = cameraManager!!.getCameraCharacteristics(id)
+            val isFlashAvailable = characteristics.get(FLASH_INFO_AVAILABLE)
+            val lensFacing = characteristics.get(CameraCharacteristics.LENS_FACING)
+
+            if (isFlashAvailable != null && isFlashAvailable && lensFacing != null && lensFacing == CameraCharacteristics.LENS_FACING_BACK) {
+                return id
+            }
+        }
+        return null
+    }
+
+    fun resizeListBg(list: List<Int>) {
+        viewModelScope.launch(Dispatchers.IO) {
+            listBg.addAll(list)
+            val listBitmap = mutableListOf<Bitmap>()
+            list.forEach { resourceId ->
+                try {
+                    ContextCompat.getDrawable(context, resourceId)?.toBitmap()?.let { bitmap ->
+                        listBitmap.add(bitmap)
+                    }
+                }catch (e: OutOfMemoryError){
+                    e.printStackTrace()
+                }
+            }
+            _listBgBitmapFlow.value = listBitmap
+        }
+    }
+
+    fun changeBackground(position: Int) {
+        listBg.getOrNull(position)?.let { backgroundId ->
+            val params = HashMap<String, String>()
+            params[BACKGROUND_NAME] = backgroundId.toString()
+            CemAnalytics.logEventAndParams(context, screenName = GUN_DETAIL, eventName = SELECT_BACKGROUND, params = params)
+            viewModelScope.launch(Dispatchers.IO) {
+                ContextCompat.getDrawable(context, backgroundId)?.toBitmap()?.let { bitmap ->
+                    _backgroundBitmapFlow.value = bitmap
+                }
+            }
+        }
+    }
+
+    fun checkSimulatorLike(simulatorModel: SimulatorModel?) {
+        if (simulatorModel == null) return
+        viewModelScope.launch(Dispatchers.IO) {
+            isSimulatorLiked.postSuccess(databaseHelper.isSimulatorLiked(simulatorModel))
+        }
+    }
+
+    fun likeSimulator(simulatorModel: SimulatorModel?, isLike: Boolean, onResult: () -> Unit) {
+        if (simulatorModel == null) return
+        viewModelScope.launch(Dispatchers.IO) {
+            databaseHelper.likeSimulator(simulatorModel, isLike)
+            delay(500)
+            launch(Dispatchers.Main) {
+                onResult.invoke()
+            }
+        }
+    }
+
+    fun toggleFlashLight(on: Boolean) {
+        try {
+            cameraId?.let {
+                runCatching {
+                    cameraManager?.setTorchMode(it, on)
+                }.onFailure {
+                    it.printStackTrace()
+                    Log.e(ERROR, "Error setTorchMode ${it.printStackTrace()}")
+                }
+            } ?: Log.e(ERROR, "Camera with flash not found")
+        } catch (e: CameraAccessException) {
+            e.printStackTrace()
+        }
+    }
+}
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_reload"
+    android:id="@+id/view"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:visibility="invisible"
+            android:id="@+id/batteryEffect"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:layout_marginHorizontal="@dimen/size_32"
+            android:rotation="90"
+            android:layout_marginTop="@dimen/size_50"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:lottie_fileName="battery.json"
+            app:layout_constraintVertical_bias=".12"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bulletEffect"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_160"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_battery"
+            android:layout_marginBottom="@dimen/size_20"
+            android:layout_marginHorizontal="@dimen/size_20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintVertical_bias=".16"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_24"
+                android:layout_marginEnd="@dimen/size_32"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.cemsofwave.gunsimulator.ui.customview.GradientTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_220"
+                android:fontFamily="@font/montserrat_extra_bold_800"
+                android:text="@string/warning"
+                android:textColor="@color/black1D1B08"
+                android:textSize="@dimen/text_size_24"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/imgClose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgFlash"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="@dimen/size_0"
+                android:src="@drawable/ic_flash"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@id/batteryEffect"
+                app:layout_constraintDimensionRatio="2:3"
+                app:layout_constraintEnd_toEndOf="@id/batteryEffect"
+                app:layout_constraintStart_toStartOf="@id/batteryEffect"
+                app:layout_constraintTop_toTopOf="@id/batteryEffect"
+                app:layout_constraintWidth_percent="0.1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tvNotify"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/the_power_has_run_out"
+                android:layout_marginHorizontal="@dimen/size_16"
+                app:layout_constraintEnd_toEndOf="@id/batteryEffect"
+                app:layout_constraintStart_toStartOf="@id/batteryEffect"
+                app:layout_constraintTop_toBottomOf="@id/bulletEffect"
+                app:layout_constraintBottom_toTopOf="@id/nativeView"/>
+
+            <com.cem.admodule.manager.CustomNativeView
+                android:id="@+id/nativeView"
+                android:layout_width="@dimen/size_0"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:ad_view_layout="@layout/admob_native_ad_view_background"
+                android:layout_marginTop="@dimen/size_24"
+                android:layout_marginHorizontal="@dimen/size_24"
+                app:layout_constraintTop_toBottomOf="@id/tvNotify"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btnCharge"
+                app:layout_constraintVertical_bias="0"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCharge"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_48"
+            android:layout_marginVertical="@dimen/size_20"
+            android:background="@drawable/bg_button_setting"
+            android:fontFamily="@font/montserrat_bold_700"
+            android:text="@string/charge"
+            android:textAllCaps="false"
+            android:textColor="@color/black1D1B08"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nativeView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".8"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/size_0"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_48"
+            android:background="@drawable/bg_button_setting"
+            android:fontFamily="@font/montserrat_bold_700"
+            android:text="@string/charge"
+            android:visibility="invisible"
+            android:textAllCaps="false"
+            android:textColor="@color/black1D1B08"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCharge" />
+</androidx.constraintlayout.widget.ConstraintLayout>

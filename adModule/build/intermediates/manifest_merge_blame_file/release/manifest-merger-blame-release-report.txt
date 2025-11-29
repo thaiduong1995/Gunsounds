@@ -1,0 +1,8 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.cem.admodule" >
+4
+5    <uses-sdk android:minSdkVersion="24" />
+5-->/Users/cem/Documents/CEM_AND/And_GunSounds/adModule/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest8934072288722617282.xml
+6
+7</manifest>
